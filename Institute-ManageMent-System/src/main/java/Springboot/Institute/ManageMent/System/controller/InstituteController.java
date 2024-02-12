@@ -58,7 +58,7 @@ public class InstituteController {
     // Endpoint to delete an institute by its ID
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteInstituteById(@PathVariable int id) {
-        // Call the delete method from your service
+        // Call the delete method from service class
         boolean isDeleted = instituteService.deleteInstituteById(id);
         if (isDeleted) {
             return ResponseEntity.ok("Institute with ID " + id + " deleted successfully");
